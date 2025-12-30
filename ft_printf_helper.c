@@ -17,8 +17,7 @@ int	ft_putchar(char c)
 	unsigned char	uc;
 
 	uc = (unsigned char)c;
-	write(1, &uc, 1);
-	return (1);
+	return (write(1, &uc, 1));
 }
 
 int	ft_putstr(char *str)

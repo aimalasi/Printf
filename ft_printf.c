@@ -54,7 +54,7 @@ int	ft_printf(const char *format, ...)
 	int		i;
 	int		count;
 
-	if (!format || (format[0] == '%' && format[1] == '\0'))
+	if (!format)
 		return (-1);
 	i = 0;
 	count = 0;
@@ -72,3 +72,28 @@ int	ft_printf(const char *format, ...)
 	va_end (ap);
 	return (count);
 }
+/* int main(void)
+{
+	int	i = 42;
+
+	printf("Testing ft_printf\n\n");
+	ft_printf("%%c: [%c]\n", 'A');
+	printf("%%c: [%c]\n", 'A');
+	ft_printf("%%s: [%s]\n", "Hello");
+	printf("%%s: [%s]\n", "Hello");
+	ft_printf("%%p: [%p]\n", &i);
+	printf("%%p: [%p]\n", &i);
+	ft_printf("%%d: [%d]\n", -427);
+	printf("%%d: [%d]\n", -427);
+	ft_printf("%%i: [%i]\n", 123);
+	printf("%%i: [%i]\n", 123);
+	ft_printf("%%u: [%u]\n", 4274946584U);
+	printf("%%u: [%u]\n", 4274946584U);
+	ft_printf("%%x: [%x]\n", 255);
+	printf("%%x: [%x]\n", 255);
+	ft_printf("%%X: [%X]\n", 255);
+	printf("%%X: [%X]\n", 255);
+	ft_printf("%%%%: [%%]\n");
+	printf("%%%%: [%%]\n");
+	return (0);
+} */
